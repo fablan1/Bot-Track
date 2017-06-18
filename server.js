@@ -25,10 +25,10 @@ users = [];
 serverGlobals = {secret:'33YXSZADN345',port:8080};
 
 connection = mysql.createConnection({
-    host     : '104.155.2.95',
-    user : 'root',
-    password : "EttlingenBaka",
-    database:'bottrack_db'
+    host     : 'XYZ',
+    user : 'XYZ',
+    password : "XYZ",
+    database:'XYZ'
 });
 
 connection.connect(function(err)
