@@ -1,0 +1,111 @@
+
+<script id="view_settings" type="text/x-handlebars-template">
+
+    <div class="settings container">
+
+        <div class="actionBtnCont">
+            <a class="waves-effect waves-light btn modal-trigger" href="#deleteAccountInformation">Delete Account</a>
+            <a class="waves-effect waves-light btn modal-trigger" href="#changePWInformation">Change Password</a>
+        </div>
+
+    <div class="userFeedbackCont">
+        <h5 class="center-align" id="userFeedback"></h5>
+    </div>
+
+    <!-- Modal Structure: Delete Account -->
+    <div id="deleteAccountInformation" class="modal">
+        <div class="modal-content">
+            <h4>Delete Account </h4>
+            <div class="row">
+                <form class="col s12" method="post">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="deleteAcc" type="password"  name="pw">
+                            <label for="deleteAcc" class="black-text">Password</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="deleteAccount">Delete Account</a>
+                <a href="index.html" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Structure: changePWInformation-->
+    <div id="changePWInformation" class="modal">
+        <div class="modal-content">
+            <h4>Change Password </h4>
+            <div class="row">
+                <form class="col s12" method="post">
+
+                    <div class="row">
+                        <div class="input-field col s12 oldPassword">
+                            <input id="oldPW" type="password" class="validate" name="pw" >
+                            <label for="oldPW"  data-error="" class="black-text">Old Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 newPassword">
+                            <input id="newPW" type="password" class="validate" name="pw" >
+                            <label for="newPW" class="black-text">New Password</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12 newPasswordRepeat">
+                            <input id="repeatNewPW" type="password" class="validate" name="pw" >
+                            <label for="repeatNewPW" data-error class="black-text">Repeat New Password</label>
+                        </div>
+                        <div class="col s12">
+                            <div id="pwValMessage">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" waves-effect waves-green btn-flat" id="changePW">Change password</a>
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+</script>
+
+
+<script id="passwordValidation_userFeedback" type="text/x-handlebars-template">
+    {{#ifCond type "minLength"}}
+      Minimum length is 6
+    {{/ifCond}}
+
+    {{#ifCond type "number"}}
+      At least one number ist required (0-9)
+    {{/ifCond}}
+
+    {{#ifCond type "lowercase"}}
+      At least one lowercase letter is required (a-z)!
+    {{/ifCond}}
+
+    {{#ifCond type "uppercase"}}
+      At least one uppercase letter is required (A-Z)!
+    {{/ifCond}}
+
+    {{#ifCond type "equal"}}
+      Please check if your passwords are equal
+    {{/ifCond}}
+
+    {{#ifCond type "empty"}}
+      Password can not be empty
+    {{/ifCond}}
+</script>

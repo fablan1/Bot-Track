@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BotTrack</title>
+</head>
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo32x.png?v=6">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body>
+
+<!-- {HTML_BLOCK} -->
+<div id="viewCont">
+
+
+    <header id="header">
+        <nav>
+            <ul class="right hide-on-med-and-down">
+                <li class="active projectsOverview"><a href="#" class="">Projects</a></li>
+                <li class="settings"><a href="#" class="">Settings</a></li>
+                <li><a class="waves-effect waves-light btn logout">Logout</a></li>
+            </ul>
+
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </nav>
+    </header>
+
+    <ul id="navBar" data-active="0" class="side-nav fixed">
+        <li> <div class="logo"></div></li>
+        <li><a class="waves-effect waves-blue active menu" href="#!" data-type="dashboard">Dashboard</a></li>
+        <li><a class="waves-effect waves-blue active menu" href="#!" data-type="details">Details</a></li>
+    </ul>
+
+    <div class="container" id="content">
+
+    </div>
+
+
+</div>
+<!-- {/HTML_BLOCK} -->
+
+</body>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--build:css css/styles.min.css-->
+<link type="text/css" rel="stylesheet" href="libs/materialize/css/materialize.min.css"  media="screen,projection"/>
+<link rel="stylesheet" href="build/css/globals.css">
+<link rel="stylesheet" href="build/css/projects_overview.css">
+<!--endbuild-->
+
+<!--build:js app.min.js -->
+<script type="text/javascript" src="libs/jquery/jquery-2.2.0.min.js"></script>
+<script src="libs/materialize/js/materialize.min.js"></script>
+<script src="libs/chart/Chart.min.js"></script>
+<script src="libs/handlebar/handlebars-v4.0.5.min.js"></script>
+<script src="helper/helper.js"></script>
+<script src="helper/array.js"></script>
+<script src="helper/dom.js"></script>
+<script src="helper/date.js"></script>
+<script src="helper/templates.js"></script>
+<script src="helper/ajax.js"></script>
+<script src="app.js"></script>
+<script src="views/settings/settings.js"></script>
+<script src="views/project/project.js"></script>
+<script src="views/project/dashboard.js"></script>
+<script src="views/project/details.js"></script>
+<script src="views/projectsOverview/projectsOverview.js"></script>
+<!-- endbuild -->
+
+</html>

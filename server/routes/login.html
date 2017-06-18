@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/logo32x.png?v=6">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../../libs/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../build/css/auth.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+<body class="blue-grey lighten-1">
+
+<div id="particles-js"></div>
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="login.html" class="waves-effect waves-light btn">Login</a></li>
+            <li><a href="register.html" class="waves-effect waves-light btn">Registrieren</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!--BEGIN MAIN-->
+<main>
+
+
+<div class="container auth-center">
+
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="row">
+                        <form class="col s12" method="post">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email"  name="username" value="fablangenau@googlemail.com">
+                                    <label for="email" class="">E-Mail</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="pw" type="password" class="validate" name="pw" value="Test123" >
+                                    <label for="pw" class="">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 login-validation">
+
+                                </div>
+                            </div>
+                            <a class="waves-effect waves-light btn" id="login">Login</a>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--END CONTAINER-->
+</div>
+
+    <!--END MAIN-->
+</main>
+
+<script type="text/javascript" src="../../libs/jquery/jquery-2.2.0.js"></script>
+<script src="../../libs/particles/particles.js"></script>
+<script type="text/javascript" src="../../libs/materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../helper/helper.js"></script>
+<script type="text/javascript" src="../../helper/dom.js"></script>
+<script type="text/javascript" src="../../views/login/login.js"></script>
+</body>
+</html>

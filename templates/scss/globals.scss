@@ -1,0 +1,464 @@
+
+@import 'mixins.scss';
+
+.testing {
+  width: percentage(5/7);
+}
+
+#viewCont {
+
+  width:100%;
+  height:100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 70%;
+}
+
+#header nav {
+  background-color:$navBarBgColor;
+}
+
+#navBar {
+
+  width:180px;
+  @include transition(transform 300ms ease-out);
+}
+
+#navBar[data-active="0"] {
+
+  @include transform(translate3d(-190px,0,0));
+}
+
+
+#navBar .menu[data-active="1"] {
+
+  background-color:#a7a8ac;
+}
+
+#navBar .logo {
+
+  margin-top: 8px;
+  margin-left: 60px;
+  width:50px;
+  height:50px;
+  background-repeat:no-repeat;
+  background-image: url('../../assets/img/logo.svg');;
+  background-size:50px 50px;
+  background-position:0px 0px;
+}
+
+#navBar :nth-child(2) {
+
+  margin-top:10px;
+}
+
+#navBar li {
+
+  padding:0px;
+}
+
+/* <editor-fold desc="Common"> */
+
+.btn {
+
+  background-color: white;
+  color:black;
+}
+
+.btn:hover, .btn-large:hover {
+
+  background-color: $navBarBgColor;
+  color:white;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $navBarBgColor;
+  box-shadow: 0 1px 0 0 $navBarBgColor;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+
+  color: $navBarBgColor;
+}
+
+.waves-effect.waves-blue .waves-ripple {
+  background-color: $navBarBgColor;
+}
+
+.row input.valid {
+
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 transparent;
+}
+/* </editor-fold> */
+
+
+.container .createProject a {
+
+  background-color: $navBarBgColor;
+}
+
+.projectsCont .project[data-view="projectsOverview"] .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+
+  color:$navBarBgColor;
+}
+
+.projectsCont .project[data-view="projectsOverview"] .card-domain {
+
+  display: inherit;
+}
+
+.projectsCont .project[data-view="projectsOverview"] .delete {
+
+  cursor:pointer;
+}
+
+.projectsCont .project[data-view="projectsOverview"] .domain,
+.projectsCont .project[data-view="projectsOverview"] .title {
+
+  @include text-ellipsis();
+  display: inherit;
+}
+
+.project[data-view="dashboard"] {
+
+  position:relative;
+  float:left;
+  width:100%;
+}
+
+.project[data-view="dashboard"] .ChartCont,
+.project[data-view="dashboard"] .KPICont,
+.project[data-view="dashboard"] .VisitsCont {
+
+  position:relative;
+  float:left;
+  width:100%;
+  margin-bottom:20px;
+}
+
+.project[data-view="dashboard"] .chartCont {
+
+  position:relative;
+  float:left;
+  width:100%;
+  height:400px;
+  margin-top:20px;
+}
+
+.project[data-view="dashboard"] .chartCont .header {
+  position:relative;
+  float:left;
+  width:calc(100% - 430px);
+  @include box-sizing(border-box);
+  padding:8px;
+  font-size:20px;
+}
+
+.project[data-view="dashboard"] .chartCont.control {
+
+  position:relative;
+  float:left;
+  width:260px
+}
+
+.project[data-view="dashboard"] .control .apply {
+
+  position:relative;
+  float:left;
+  margin-right:20px;
+  margin-top:10px;
+}
+
+.project[data-view="dashboard"] .control input {
+
+  position:relative;
+  float:left;
+  width:120px;
+  text-align:center;
+}
+
+.project[data-view="dashboard"] .control input[data-unvalid="1"] {
+
+  border-bottom:2px solid $red;
+  box-shadow:none;
+}
+
+.project[data-view="dashboard"] .control > :nth-child(2) {
+
+  margin-right:20px;
+}
+
+.project[data-view="dashboard"] .chartCont .chart {
+
+  position:relative;
+  float:left;
+  width:100%;
+  height:100%;
+}
+
+.project[data-view="dashboard"] .KPICont {
+
+  height:120px;
+  margin-top:20px;
+}
+
+.project[data-view="dashboard"] .KPICont .KPI {
+
+  position:relative;
+  float:left;
+  width:150px;
+  margin-right:50px;
+  margin-left:50px;
+}
+
+.project[data-view="dashboard"] .KPICont .KPI .value {
+
+  position:relative;
+  float:left;
+  width:100%;
+  font-size:40px;
+  margin-bottom: -10px;
+  color:$green;
+}
+
+.project[data-view="dashboard"] .KPICont .KPI[data-negative="1"] .value {
+
+  color:$red;
+}
+
+.project[data-view="dashboard"] .KPICont .KPI .title {
+
+  position:relative;
+  float:left;
+  width:100%;
+  font-size:18px;
+  color:#a7a8ac;
+}
+
+.visitsCont .wrapper > :nth-child(2n+1) {
+
+  background-color:#eeeff3;
+}
+
+.visitsCont .header,
+.visitsCont .wrapper {
+
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.visitsCont .wrapper {
+
+  min-height:380px;
+}
+
+.visitsCont .header > div {
+
+  position: relative;
+  float: left;
+  @include box-sizing(border-box);
+  padding:8px;
+}
+
+.visitsCont .header .url {
+
+  width:80%;
+}
+
+.visitsCont .header .visits {
+
+  width:20%;
+}
+
+.visitsCont .visit .url,
+.visitsCont .visit .visits {
+
+  position: relative;
+  float: left;
+  @include box-sizing(border-box);
+  padding:8px;
+}
+
+.visitsCont .visit {
+
+  position: relative;
+  float: left;
+  width:100%;
+}
+
+.visitsCont .visit .url {
+
+  width:80%;
+}
+
+.visitsCont .visit .visits {
+
+  width:20%;
+}
+
+
+.project[data-view="details"] {
+
+  position:relative;
+  float:left;
+  width:100%;
+}
+
+.project[data-view="details"] .exportJSON,
+.project[data-view="details"] .exportCSV {
+
+  position:relative;
+  float:right;
+  margin-top:20px;
+  margin-right:10px;
+}
+
+.project[data-view="details"]  .visitsCont {
+
+  position:relative;
+  float:left;
+  margin-top:30px;
+  width:100%;
+}
+
+.project[data-view="details"]  .visitsCont .paginationCont {
+
+  position:relative;
+  float:left;
+  margin-top:30px;
+  width:100%;
+}
+
+.project[data-view="details"] .visit .url {
+
+  @include text-ellipsis();
+}
+
+.paginationCont .page {
+
+  color:#444;
+}
+
+.paginationCont .active {
+
+  color:#fff;
+}
+
+.pagination li.active {
+
+  background-color: $navBarBgColor;
+}
+
+
+#createProject {
+
+  min-height:85%;
+}
+
+#createProject label:after {
+
+  min-width:200px;
+  top: 40px;
+}
+
+#createProject label.active:after {
+
+  min-width:200px;
+  top: 65px;
+}
+
+#createProject .generateTracking {
+
+}
+
+#createProject .testTracking {
+
+
+}
+
+#createProject .testTracking {
+
+  float:left;
+}
+
+#createProject .testTrackingFeedback {
+
+  position:relative;
+  float:left;
+  padding:8px;
+  margin-left:10px;
+  color:$green;
+}
+
+#createProject .testTrackingFeedback[data-error="1"] {
+
+  color:$red;
+}
+
+/* <editor-fold desc="Settings"> */
+
+.container .settings .actionBtnCont {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container .settings  .actionBtnCont > :first-child {
+
+  margin-right:10px;
+}
+
+.container .settings {
+
+  margin-top:20px;
+}
+
+.container .settings .userFeedbackCont,
+.container .settings .actionBtnCont {
+
+}
+
+#changePWInformation input:not([type]) + label:after,
+#changePWInformation input[type=text] + label:after,
+#changePWInformation input[type=password] + label:after,
+#changePWInformation input[type=email] + label:after
+{
+  top:35px;
+}
+
+#changePWInformation input:not([type]) + label.active:after,
+#changePWInformation input[type=text] + label.active:after,
+#changePWInformation input[type=password] + label.active:after,
+#changePWInformation input[type=email] + label.active:after {
+
+  min-width:200px;
+  top: 65px;
+}
+/* </editor-fold> */

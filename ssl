@@ -1,0 +1,20 @@
+
+creates server.enc.key.
+openssl genrsa -des3 -out server.enc.key 1024
+
+Generate csr from key
+openssl req -new -key server.enc.key -out server.csr
+
+sign certificate
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+generate cert + key pem file
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365
+
+
+
+ssl with pem files -> self signing
+http://blog.mgechev.com/2014/02/19/create-https-tls-ssl-application-with-express-nodejs/
+
+ssl with csr -> not self signing used for comodo ssl on namcheap
+http://www.sitepoint.com/how-to-use-ssltls-with-node-js/

@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
+
+.brand-logo {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/img/logo.svg");
+  background-size: 50px 50px;
+  background-position: 0px 0px; }
+
+.btn {
+  background-color: white;
+  color: black; }
+
+.btn:hover, .btn-large:hover {
+  background-color: #03A9F4;
+  color: white; }
+
+#login {
+  background-color: #03A9F4;
+  color: white; }
+
+.card .row input.valid {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 transparent; }
+
+.card .row input:focus {
+  border-bottom: 1px solid #03A9F4;
+  box-shadow: 0 1px 0 0 #03A9F4; }
+
+.card .row input:focus + label {
+  color: #03A9F4; }
+
+.email-validation,
+.password-validation {
+  color: firebrick;
+  padding: 0 0.75rem;
+  float: left;
+  box-sizing: border-box; }
+
+.auth-center .container .row {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+
+.auth-center {
+  width: 40%; }
+
+.auth-center .row .col.m6 {
+  width: 100%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.auth-center .card {
+  background-color: rgba(255, 255, 255, 0.89); }
+
+.auth-center input {
+  border-bottom: 1px solid #ffffff; }
+
+.auth-center {
+  margin-top: auto;
+  margin-bottom: auto; }
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2196F3;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
